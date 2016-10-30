@@ -49,8 +49,13 @@
     "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
+    "fastclick": "^1.0.6",
+    "fontgen-loader": "https://github.com/eyala-stratoscale/fontgen-loader",
+    "mobx": "^2.6.0",
+    "mobx-react": "^3.5.8",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-router": "4.0.0-2"
   },
   "scripts": {
     "start": "node scripts/start.js",
@@ -81,7 +86,9 @@
       "react-app",
       "react-app"
     ],
-    "plugins": ["transform-decorators-legacy"]
+    "plugins": [
+      "transform-decorators-legacy"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"

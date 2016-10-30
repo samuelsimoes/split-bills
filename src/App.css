@@ -1,24 +1,592 @@
-.App {
+input, textarea, button {
+  appearance: none;
+  border-radius: 0;
+}
+
+body {
+  margin: 0;
+  color: #282828;
+}
+
+body, input {
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: 300;
+}
+
+body, html, #root, #main-container {
+  height: 100%;
+}
+
+input:focus, button:focus,
+input:active, button:active {
+  outline-width: 0;
+  tap-highlight-color: transparent;
+}
+
+.title-3 {
+  position: relative;
+  color: #8A8A8A;
+  font-weight: 300;
+  text-transform: lowercase;
+  text-align: center;
+  font-size: 16px;
+}
+
+#main-nav {
+  background-image: linear-gradient(-180deg, #595959 0%, #676767 91%, #5F5F5F 100%);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-bottom: 40px;
+  height: 80px;
+  z-index: 2;
+}
+
+#main-nav .link {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 33.33%;
+  height: 80px;
+  box-sizing: border-box;
+  color: #FFF;
+}
+
+#main-nav .link span {
+  display: none;
+}
+
+#main-nav .link.active {
+  background: #fff;
+  color: #404040;
+}
+
+#main-nav .link.link-people:before {
+  content: '\F109';
+}
+
+#main-nav .link.link-plates:before {
+  content: '\F103';
+}
+
+#main-nav .link.link-to-pay:before {
+  content: '\F105';
+}
+
+#main-nav .link:before {
+  font-family: BaseIcons !important;
+  font-size: 37px;
+  font-weight: normal!important;
+  display: block;
+  width: 100%;
+  height: 37px;
+  position: absolute;
+  left: 0;
+  top: 20px;
+}
+
+.input-container {
+  height: 60px;
+}
+
+.input-container input {
+  border: none;
+  border-bottom: 1px solid #747474;
+  box-sizing: border-box;
+  font-size: 23px;
+  font-weight: 300;
+  line-height: 50px;
+  height: 50px;
+  padding: 0 15px;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+}
+
+.input-container label {
+  display: block;
+  font-size: 14px;
+  line-height: 15px;
+  font-weight: 300;
+  margin-bottom: -5px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  text-transform: lowercase;
+}
+
+.button-1 {
+  cursor: pointer;
+  background: #6F9CD4;
+  color: #FFF;
+  border: none;
+  text-transform: lowercase;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 60px;
+  height: 60px;
+  padding: 0 30px;
+  box-sizing: border-box;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.button-1 .button-1-number {
+  position: relative;
+  background: #fff;
+  color: #000;
+  padding: 0 5px;
+  top: -3px;
+  left: -3px;
+  margin-right: 5px;
+  font-size: 12px;
+  line-height: 18px;
+  display: inline-block;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+a.button-1 {
+  display: inline-block;
+  text-decoration: none;
 }
 
-.App-intro {
-  font-size: large;
+#new-person-form {
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+#new-person-form input {
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.list-container-1 .container-row {
+  border-bottom: 1px dashed #adadad;
+  padding: 20px 15px;
+}
+
+.list-container-1 .container-row:last-child {
+  border-bottom: 0;
+}
+
+.table-1 {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-1 .delete-button-column {
+  text-align: right;
+  width: 50px;
+  padding-right: 0!important;
+}
+
+.table-1 th {
+  font-size: 15px;
+  font-weight: lighter;
+  text-transform: lowercase;
+}
+
+.table-1 tr {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.table-1 tr:last-child {
+  border-bottom: 0;
+}
+
+.table-1 td {
+  padding: 15px 0;
+}
+
+.table-1 tr td:first-child {
+  padding-left: 15px;
+}
+
+.table-1 tr td:last-child {
+  padding-right: 15px;
+}
+
+.all-plates-table .price-cell {
+  vertical-align: top;
+  position: relative;
+}
+
+.all-plates-table .price-cell a {
+  color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding-right: 70px;
+  width: 100%;
+}
+
+.all-plates-table .without-people .price-cell {
+  vertical-align: middle;
+}
+
+.consumers-list {
+  margin: 0;
+  font-size: 14px;
+  text-align: right;
+}
+
+.paragraph-1 {
+  font-size: 23px;
+  line-height: 38px;
+  margin: 0;
+}
+
+.all-plates-table .price-column,
+.all-plates-table .price-cell {
+  text-align: right;
+}
+
+.all-plates-table .quantity-column {
+  width: 70px;
+}
+
+.all-plates-table .quantity-column,
+.all-plates-table .quantity-cell {
+  text-align: center;
+}
+
+.all-plates-table .actions-column {
+  width: 100px;
+  box-sizing: border-box;
+  text-align: right;
+}
+
+.all-plates-table .action-button:first-child {
+  margin-left: 0;
+}
+
+.all-plates-table .action-button {
+  margin-left: 12px;
+}
+
+.plate-consumption-table .int-selector-cell {
+  width: 111px;
+}
+
+.people-table .person-name-cell {
+  text-align: right;
+  padding-right: 15px;
+}
+
+.rounded-button {
+  height: 33px;
+  width: 33px;
+  background: #FFFFFF;
+  vertical-align: top;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.14);
+  border-radius: 50%;
+  border: none;
+  text-indent: -9999em;
+  position: relative;
+  cursor: pointer;
+  text-align: left;
+}
+
+a.rounded-button {
+  display: inline-block;
+}
+
+.rounded-button:after {
+  color: #5D5D5D;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-indent: 0;
+  font-size: 19px;
+  font-family: BaseIcons !important;
+  height: 33px;
+  display: block;
+  line-height: 33px;
+  width: 33px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.rounded-button.rb-plus:after {
+  content: '\F107';
+}
+
+.rounded-button.rb-minus:after {
+  content: '\F104';
+}
+
+.blank-slate {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 30vh;
+}
+
+.blank-slate .description {
+  text-align: center;
+  line-height: 20px;
+  font-size: 15px;
+  color: #7A7A7A;
+}
+
+.plates-blank-slate .call-action-button {
+  width: 100%;
+}
+
+.blank-slate:after {
+  font-size: 25vh;
+  line-height: 30vh;
+  font-family: BaseIcons !important;
+  font-weight: normal!important;
+  color: #EAEAEA;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.plates-blank-slate:after {
+  content: '\F103';
+}
+
+.people-blank-slate:after {
+  content: '\F109';
+}
+
+.plate-quantity-price .input-container {
+  height: initial;
+}
+
+.plate-quantity-price input {
+  background: transparent;
+  color: #FFF;
+  font-size: 30px;
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid white;
+}
+
+.plate-quantity-price label {
+  color: #FFF;
+}
+
+.plate-quantity-price {
+  position: relative;
+  z-index: 3;
+  padding: 30px 5%;
+  background-image: linear-gradient(-180deg, #595959 0%, #676767 91%, #5F5F5F 100%);
+}
+
+.plate-quantity-price .price {
+  float: left;
+  width: 55%;
+}
+
+.plate-quantity-price .quantity {
+  float: right;
+  width: 35%;
+}
+
+.plate-quantity-price:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.plate-quantity-price input {
+  text-align: center;
+}
+
+.plate-consumption-container.blocked {
+  filter: blur(2px);
+  opacity: 0.4;
+}
+
+.plate-consumption-block {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+  position: fixed;
+}
+
+.int-selector .value {
+  line-height: 33px;
+  height: 33px;
+  display: inline-block;
+  width: 45px;
+  text-align: center;
+  font-size: 23px;
+}
+
+.num-pad .current-value-container {
+  box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.04);
+  text-align: center;
+  padding-top: 3vh;
+  box-sizing: border-box;
+  height: 25vh;
+  margin-bottom: 5vh;
+}
+
+.num-pad .value {
+  font-size: 12vh;
+  margin: 0;
+}
+
+.num-pad .title {
+  font-size: 3.5vh;
+  font-weight: 300;
+  margin: 0;
+  text-transform: lowercase;
+  color: #B9B9B9;
+}
+
+.num-pad .numbers {
+  height: 65vh;
+  text-align: center;
+  position: relative;
+  box-shadow: inset 0px 0px 100px 50px white;
+}
+
+.num-pad .num-pad-button:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid #b8b8b8;
+  border-bottom: 1px solid #b8b8b8;
+  box-sizing: border-box;
+}
+
+.num-pad .num-pad-button:nth-child(3n+3):before {
+  border-right: 0;
+}
+
+.num-pad .num-pad-button {
+  height: 25%;
+  width: 33.33%;
+  display: inline-block;
+  background: transparent;
+  vertical-align: top;
+  font-size: 5vh;
+  font-weight: 100;
+  border: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.num-pad .num-pad-button-delete,
+.num-pad .num-pad-button-ok {
+  text-indent: -99999px;
+  font-family: BaseIcons !important;
+  font-size: 30px;
+  font-weight: normal!important;
+}
+
+.num-pad .num-pad-button-delete:after,
+.num-pad .num-pad-button-ok:after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: -2vh;
+  font-size: 5vh;
+  text-indent: initial;
+  color: #545454;
+}
+
+.num-pad .num-pad-button-delete:after {
+  content: "\F101";
+}
+
+.num-pad .num-pad-button-ok:after {
+  content: "\F102";
+}
+
+.bottom-menu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+  background: #fff;
+}
+
+.content-container {
+  z-index: 1;
+  position: relative;
+}
+
+.common-container {
+  padding-top: 120px;
+}
+
+.with-bottom-menu-container {
+  padding-bottom: 70px;
+}
+
+.to-pay-table .price-cell {
+  text-align: right;
+}
+
+.to-pay-table .total-row {
+  font-weight: bold;
+}
+
+.all-plates-bottom-menu .button {
+  text-align: center;
+  width: 50%;
+}
+
+.service-value-input-container input {
+  text-align: center;
+}
+
+.table-delete-button {
+  position: relative;
+  background: #E98689;
+  border: none;
+  text-indent: -9999px;
+  height: 60px;
+  width: 50px;
+  text-align: center;
+  padding: 0;
+}
+
+.table-delete-button:after {
+  width: 100%;
+  height: 100%;
+  line-height: 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  content: '\F108';
+  font-family: BaseIcons !important;
+  font-weight: normal!important;
+  color: #FFF;
+  font-size: 20px;
+  text-indent: initial!important;
+}
+
+.button-1.finish-button:before,
+.button-1.add-button:before {
+  font-family: ButtonIcons !important;
+  margin-right: 9px;
+}
+
+.button-1.finish-button:before {
+  content: '\F101';
+}
+
+.button-1.add-button:before {
+  content: '\F102';
+}
+
+.full-button-menu .button-1 {
+  width: 100%;
 }

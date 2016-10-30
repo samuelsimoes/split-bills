@@ -12,3 +12,10 @@ require('whatwg-fetch');
 // Object.assign() is commonly used with React.
 // It will use the native implementation if it's present and isn't buggy.
 Object.assign = require('object-assign');
+
+if (!String.prototype.startsWith) {
+  String.prototype.startsWith = function(searchString, position) {
+    position = position || 0;
+    return this.indexOf(searchString, position) === position;
+  };
+}
