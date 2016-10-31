@@ -22,7 +22,7 @@ class MainNav extends Component {
 
     return [
       <Link
-        to='/plates-index'
+        to='/plates'
         className='link link-plates'
         isActive={location => location.pathname.indexOf('plates') !== -1}
         activeClassName='active'>

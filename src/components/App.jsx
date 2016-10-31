@@ -41,17 +41,8 @@ class App extends Component {
             return <People people={this.stores.people} actions={actions} />
           }}/>
 
-          <Match pattern='/plates-index' exactly render={() => {
-            if (this.platesPageShowingCid) {
-              return <Redirect to={`/plates/${this.platesPageShowingCid}/edit`} />
-            } else {
-              return <Redirect to='/plates' />
-            }
-          }}/>
-
           <Match pattern='/plates' exactly render={(props) => {
             let actions = new PlatesActions(this.stores.plates)
-            delete this.platesPageShowingCid
             return <Plates plates={this.stores.plates} actions={actions} people={this.stores.people} />
           }}/>
 
@@ -65,7 +56,6 @@ class App extends Component {
                 actions = new PlateActions(plate, this.stores.plates)
 
             if (plate) {
-              this.platesPageShowingCid = plate.cid
               return <Plate plate={plate} plates={this.stores.plates} people={this.stores.people} actions={actions} />
             } else {
               return <Redirect to='/plates' />
