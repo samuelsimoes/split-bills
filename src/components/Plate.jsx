@@ -124,7 +124,7 @@ class Plate extends Component {
         {block()}
 
         <h2 className='title-3'>
-          People consumption
+          People’s consumption
         </h2>
 
         {this.renderPeopleConsumption()}
