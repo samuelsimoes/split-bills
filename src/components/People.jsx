@@ -56,7 +56,7 @@ class People extends Component {
   }
 
   renderList () {
-    let rows = this.props.people.stores.map(person => {
+    let rows = this.props.people.ordered.map(person => {
       return (
         <tr key={person.cid}>
           <td className='person-name-cell'>

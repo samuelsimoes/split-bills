@@ -22,6 +22,7 @@ class MainNav extends Component {
 
     return [
       <Link
+        key='plates-link'
         to='/plates'
         className='link link-plates'
         isActive={location => location.pathname.indexOf('plates') !== -1}
@@ -30,6 +31,7 @@ class MainNav extends Component {
       </Link>,
 
       <Link
+        key='to-pay-link'
         to='/to_pay'
         className='link link-to-pay'
         activeClassName='active'>
