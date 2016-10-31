@@ -2,6 +2,8 @@
   <img alt="Split Bills" src="misc/banner.png" >
 </p>
 
+[![Build Status](https://semaphoreci.com/api/v1/samuelsimoes/split-bills/branches/master/badge.svg)](https://semaphoreci.com/samuelsimoes/split-bills)
+
 A tiny [React.js](https://facebook.github.io/react/) mobile web app to help you to easily split your happy hour bills.
 
 **[Demo](https://split-bills.herokuapp.com/)**
