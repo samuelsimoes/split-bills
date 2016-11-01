@@ -21,7 +21,7 @@ class NewPeopleForm extends Component {
           <input
             id='person-name'
             type='text'
-            autoComplete='false'
+            autoComplete='off'
             placeholder='Add a person'
             value={this.state.name}
             maxLength='20'
