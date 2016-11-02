@@ -516,6 +516,12 @@ a.rounded-button {
   background: #fff;
 }
 
+@media all and (max-height: 340px) {
+  .bottom-menu {
+    display: none;
+  }
+}
+
 .content-container {
   z-index: 1;
   position: relative;
