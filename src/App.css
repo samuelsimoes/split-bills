@@ -590,3 +590,39 @@ a.rounded-button {
 .full-button-menu .button-1 {
   width: 100%;
 }
+
+.add-home-screen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 4;
+}
+
+.add-home-screen-overlay img {
+  margin-top: 10vh;
+  height: 50vh;
+  border-radius: 50%;
+  box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.50);
+  margin-bottom: 15px;
+}
+
+.add-home-screen-overlay .content {
+  text-align: center;
+}
+
+.add-home-screen-overlay p {
+  color: #fff;
+  font-size: 20px;
+  text-shadow: 0px 0px 7px rgba(0,0,0,0.50);
+  line-height: 30px;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.add-home-screen-overlay small {
+  font-size: 15px;
+  font-weight: bold;
+}

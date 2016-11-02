@@ -11,10 +11,13 @@ import People from './People.jsx'
 import Plate from './Plate.jsx'
 import Plates from './Plates.jsx'
 import ToPay from './ToPay.jsx'
+import HomeScreenAddAsk from './HomeScreenAddAsk.jsx'
 
 import Router from 'react-router/HashRouter'
 import Match from 'react-router/Match'
 import Redirect from 'react-router/Redirect'
+
+import isRunningStandalone from '../utils/isRunningStandalone.js'
 
 import '../BaseIcons.font'
 import '../ButtonIcons.font'
@@ -28,12 +31,18 @@ class App extends Component {
       people: new PeopleStore(),
       plates: new PlatesStore()
     }
+
+    this.state = {
+      askHomeScreen: (!window.localStorage.getItem('ask-home-screen') && !isRunningStandalone())
+    }
   }
 
   render() {
     return (
       <Router>
         <div id='main-container'>
+          {this.renderHomeScreenAddAsk()}
+
           <Match pattern='/' exactly render={() => <Redirect to='/people'/>}/>
 
           <Match pattern='/people' render={() => {
@@ -69,6 +78,14 @@ class App extends Component {
         </div>
       </Router>
     )
+  }
+
+  renderHomeScreenAddAsk () {
+    if (!this.state.askHomeScreen) { return; }
+
+    window.localStorage.setItem('ask-home-screen', true)
+
+    return <HomeScreenAddAsk onClick={() => this.setState({ askHomeScreen: false })} />
   }
 }
 
