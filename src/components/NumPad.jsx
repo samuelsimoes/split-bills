@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import NumPadNumbers from './NumPadNumbers.jsx'
 
 class NumPad extends Component {
   render () {
@@ -9,25 +10,9 @@ class NumPad extends Component {
           <p className='value'>{this.props.value}</p>
         </div>
 
-        <div className='numbers'>
-          {this.renderNumbers()}
-        </div>
+        <NumPadNumbers onClickButton={this.props.onClickButton} />
       </div>
     )
-  }
-
-  renderNumbers () {
-    return [1,2,3,4,5,6,7,8,9,'delete',0,'ok'].map(key => {
-      return (
-        <button
-          key={key.toString()}
-          type='button'
-          onClick={evt => this.props.onClickButton(key)}
-          className={`num-pad-button num-pad-button-${key}`}>
-          {key}
-        </button>
-      )
-    })
   }
 }
 
