@@ -7,6 +7,7 @@ var InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 var url = require('url');
 var paths = require('./paths');
 var getClientEnvironment = require('./env');
+var OfflinePlugin = require('offline-plugin');
 
 function ensureSlash(path, needsSlash) {
   var hasSlash = path.endsWith('/');
@@ -223,7 +224,8 @@ module.exports = {
       }
     }),
     // Note: this won't work without ExtractTextPlugin.extract(..) in `loaders`.
-    new ExtractTextPlugin('static/css/[name].[contenthash:8].css')
+    new ExtractTextPlugin('static/css/[name].[contenthash:8].css'),
+    new OfflinePlugin()
   ],
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.

@@ -53,6 +53,7 @@
     "fontgen-loader": "https://github.com/eyala-stratoscale/fontgen-loader",
     "mobx": "^2.6.0",
     "mobx-react": "^3.5.8",
+    "offline-plugin": "^3.4.2",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-router": "4.0.0-2"
