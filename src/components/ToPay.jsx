@@ -77,6 +77,10 @@ class ToPay extends Component {
             </tr>
           </tbody>
         </table>
+
+        <p className="credit">
+          Created by Samuel Simões ~ <a href="https://github.com/samuelsimoes/split-bills">Github</a>
+        </p>
       </div>
     )
   }

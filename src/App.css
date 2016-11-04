@@ -632,3 +632,14 @@ a.rounded-button {
   font-size: 15px;
   font-weight: bold;
 }
+
+.credit {
+  text-align: center;
+  color: #b1b1b1;
+  font-size: 14px;
+}
+
+.credit a {
+  text-decoration: none;
+  color: #000;
+}
