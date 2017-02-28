@@ -6,6 +6,10 @@
 
 A tiny [React.js](https://facebook.github.io/react/) mobile web app to help you to easily split your happy hour bills.
 
+<p align="center">
+  <img alt="Split Bills Showcase" src="misc/showcase.png" >
+</p>
+
 **[Demo](https://split-bills.herokuapp.com/)**
 
 ##Running
