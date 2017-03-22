@@ -12,7 +12,7 @@ A tiny [React.js](https://facebook.github.io/react/) mobile web app to help you 
 
 **[Demo](https://split-bills.herokuapp.com/)**
 
-##Running
+## Running
 
 1. `npm install -g yarn`
 2. `yarn`
